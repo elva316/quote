@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+        <div id="add">
+            <h1>Add a Quote</h1>
+            <form #regForm='ngForm' (submit)='onSubmit(regForm)'>
+              <textarea class='float' name="quote" [(ngModel)]='addingQuote.quote'></textarea><br>
+              <input class='float' type="text" name="author" [(ngModel)]='addingQuote.author'><br>
+              <button class='float' type="submit">Add Quote</button>
+            </form>
+        </div>
+
+        <span>Errors will show here later</span>
+        <div id="list">
+            <h1>Quotes List</h1>
+            <div *ngIf="addingConfirm.length != 0">
+                <!-- {{ addingConfirm | json}} -->
+              <div *ngFor='let ele of addingConfirm; let i = index'>
+
+                <p>Quote: {{ ele.quote | json}}</p>
+                <p>Author: {{ ele.author | json }}</p>
+                <hr>
+              </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

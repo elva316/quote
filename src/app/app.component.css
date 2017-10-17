@@ -1,0 +1,25 @@
+#add{
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  width: 65%;
+  display: inline-block;
+}
+#list{
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+textarea{
+  width: 95%;
+  height: 100px;
+}
+.float{
+  margin-bottom: 5px;
+  border: 1px solid black;
+}
+span{
+  display: inline-block;
+  color: red;
+}
